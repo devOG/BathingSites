@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="se.miun.osgu1400.bathingsites.NewBathingSiteFragment"
+    tools:showIn="@layout/activity_new_bathing_site">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name" />
+
+        <EditText
+            android:id="@+id/nameInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameLabel"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/descriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameInput"
+            android:layout_marginTop="5dp"
+            android:text="@string/description" />
+
+        <EditText
+            android:id="@+id/descriptionInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptionLabel"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/addressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionInput"
+            android:layout_marginTop="5dp"
+            android:text="@string/address" />
+
+        <EditText
+            android:id="@+id/addressInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addressLabel"
+            android:ems="10"
+            android:inputType="text" />
+
+        <View
+            android:id="@+id/separatorView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/longitudeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressInput"
+            android:layout_marginTop="5dp"
+            android:text="@string/longitude" />
+
+        <EditText
+            android:id="@+id/longitudeInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/separatorView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@id/separatorView"
+            android:layout_below="@+id/longitudeLabel"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/latitudeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/separatorView"
+            android:layout_alignStart="@+id/separatorView"
+            android:layout_below="@id/addressInput"
+            android:layout_marginTop="5dp"
+            android:text="@string/latitude" />
+
+        <EditText
+            android:id="@+id/latitudeInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/separatorView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/separatorView"
+            android:layout_below="@+id/latitudeLabel"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/gradeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/longitudeInput"
+            android:layout_marginTop="5dp"
+            android:text="@string/grade" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gradeLabel"
+            android:layout_marginTop="5dp"
+            android:numStars="5"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/waterTempLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ratingBar"
+            android:layout_marginTop="5dp"
+            android:text="@string/water_temp" />
+
+        <EditText
+            android:id="@+id/waterTempInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/waterTempLabel"
+            android:width="100dp"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/dateForTempLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dateForTempInput"
+            android:layout_alignStart="@+id/dateForTempInput"
+            android:layout_below="@id/ratingBar"
+            android:layout_marginTop="5dp"
+            android:text="@string/date_for_temp" />
+
+        <EditText
+            android:id="@+id/dateForTempInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateForTempLabel"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/waterTempInput"
+            android:layout_toRightOf="@+id/waterTempInput"
+            android:ems="10"
+            android:inputType="date" />
+
+    </RelativeLayout>
+</ScrollView>
+

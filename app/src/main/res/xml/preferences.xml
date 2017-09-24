@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="weather_url"
+        android:title="Weather URL"
+        android:summary=""
+        android:defaultValue="http://dt031g.programvaruteknik.nu/badplatser/weather.php"
+        />
+
+    <EditTextPreference
+        android:key="download_url"
+        android:title="Download Bathing Sites URL"
+        android:summary=""
+        android:defaultValue="http://dt031g.programvaruteknik.nu/badplatser/koordinater-utf8/"
+        />
+
+    <Preference
+        android:key="database"
+        android:title="Database"
+        android:summary="See and change content in the database\n(left here for development)" >
+        <intent
+            android:action="se.miun.osgu1400.bathingsites.AndroidDatabaseManager"
+            android:targetPackage="se.miun.osgu1400.bathingsites"
+            android:targetClass="se.miun.osgu1400.bathingsites.AndroidDatabaseManager"/>
+    </Preference>
+
+</PreferenceScreen>
